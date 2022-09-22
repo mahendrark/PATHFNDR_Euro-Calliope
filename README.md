@@ -1,6 +1,8 @@
 # Sector-coupled Euro-Calliope national/subnational-scale pre-built models
 ## Built using Euro-Calliope v2.0 fork workflow commit hash: cadc0712de0a451f1cb1acefe60563ce636fe918
 
+### Note: This repo contains a Euro-Calliope pre-built model developed by Bryn Pickering. I (Mahendra) is building on top of this pre-built model, adding new technologies and running variety of scenarios. 
+
 This model is pre-packaged and ready to be loaded into Calliope, based on 2010 - 2018 input data. To run the model you will need to do the following:
 
 a. Install a specific conda environment to be working with the correct version of Calliope (`conda env create -f requirements.yml`)
