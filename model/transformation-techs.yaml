@@ -232,3 +232,59 @@ techs:
             carrier_in: syn_methanol
             carrier_out: methanol
             parent: conversion
+    # Add (grey) hydrogen production with steam methane reforming
+    smr:
+        essentials:
+            name: Steam methane reforming without carbon capture
+            parent: conversion_plus
+            carrier_in: methane
+            carrier_out: hydrogen
+            carrier_out_2: co2
+            primary_carrier_out: hydrogen
+        constraints:
+            carrier_ratios:
+                carrier_out_2.co2: 8.9 # 8.9 kgs of CO2 are produced for every kg of hydrogen source: He et al. (2021)
+            energy_eff: 0.76 # Source: Neumann et al. (2022), DEA
+            lifetime: 30
+        costs:
+            monetary:
+                energy_cap: 49.347040 # (10,000/MW_methane), IEA
+                om_annual_investment_fraction: 5.00 # 5% of CAPEX/year
+                om_prod:  0.00043395840000000005  # (10,000 EUR2015/MWh) | # Fuel costs, data from CCGT definition in legacy-techs.yaml
+
+    # Add (blue) hydrogen production with steam methane reforming with carbon capture and storage
+    # Currently nothing will be done with the captured co2 in case this technology is actually deployed
+    # In the future, this should be connected with a pipeline network to transport the captured CO2 to sequestration site
+    smr_ccs:
+        essentials:
+            name: Steam methane reforming with carbon capture
+            parent: conversion_plus
+            carrier_in: methane
+            carrier_out: hydrogen
+            carrier_out_2: co2 # CCS has about 90% capture rate, so there are some residual CO2 emissions
+            primary_carrier_out: hydrogen
+        constraints:
+            carrier_ratios:
+                carrier_out_2.co2: 1 # 1 kg of CO2 is produced for every kg of hydrogen
+            energy_eff: 0.69 # Source: Neumann et al. (2022), DEA, and He et al. (2021)
+            lifetime: 30
+        costs:
+            monetary:
+                energy_cap: 49.347040 # (10,000/MW_methane), IEA
+                om_annual_investment_fraction: 5.00 # 5% of CAPEX/year
+                om_prod:  0.00043395840000000005  # (10,000 EUR2015/MWh) | # Fuel costs, data from CCGT definition in legacy-techs.yaml
+
+    # Gas turbines that run on hydrogen to produce electricity
+    ccgt_hydrogen:
+        essentials:
+            name: CCGT using hydrogen
+            parent: conversion
+            carrier_in: hydrogen
+            carrier_out: electricity
+        constraints:
+            energy_eff: 0.65
+            lifetime: 25
+        costs:
+            monetary:
+                energy_cap: 117.1 # 10,000 EUR2022/MW Source: He et al. (2021)
+                om_annual_investment_fraction: 3.35 # Taking same FOM as CCGT values; source: Neumann et al. (2022)
