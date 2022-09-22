@@ -26,6 +26,7 @@ import:
     - './fossil-fuel-supply.yaml'
     - './fuel-distribution.yaml'
     - './biofuel-supply-2018.yaml'
+    - './hydrogen_techs_all.yaml' # If the override "all_h2_tech" is used, additional hydrogen tech will be added to the model
 model:
     name: 'Euro-Calliope'
     calliope_version: 0.6.8
