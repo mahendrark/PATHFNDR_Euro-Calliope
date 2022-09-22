@@ -1,0 +1,173 @@
+
+overrides:
+    all_h2_tech:
+        techs.salt_cavern_storage.exists: true
+        locations:
+            AUT.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            BEL.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            BGR.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            HRV.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            CYP.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            CZE.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            DNK.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+                salt_cavern_storage:
+                    exists: true
+                    constraints:
+                        storage_cap_max: 70000 # source of these numbers: Neumann et al. 2022
+            EST.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            FIN.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            FRA.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            DEU.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+                salt_cavern_storage:
+                    exists: true
+                    constraints:
+                        storage_cap_max: 450000 # 10,000 MWH of H2 storage; 4500 twh
+            GRC.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+                salt_cavern_storage:
+                    exists: true
+                    constraints:
+                        storage_cap_max: 12000
+            HUN.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            IRL.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            ITA.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            LVA.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            LTU.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            LUX.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            NLD.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+                salt_cavern_storage:
+                    exists: true
+                    constraints:
+                        storage_cap_max: 15000
+            POL.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+                salt_cavern_storage:
+                    constraints:
+                        storage_cap_max: 12000
+            PRT.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+                salt_cavern_storage:
+                    exists: true
+                    constraints:
+                        storage_cap_max: 40000
+            ROU.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            SVK.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            SVN.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            ESP.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+                salt_cavern_storage:
+                    exists: true
+                    constraints:
+                        storage_cap_max: 35000
+            SWE.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            GBR.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+                salt_cavern_storage:
+                    exists: true
+                    constraints:
+                        storage_cap_max: 105000
+            ALB.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            BIH.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            MKD.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            NOR.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            SRB.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            CHE.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+            ISL.techs:
+                smr:
+                smr_ccs:
+                ccgt_hydrogen:
+
