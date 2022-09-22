@@ -63,3 +63,23 @@ techs:
             monetary:
                 storage_cap: 2.1  # (10,000 EUR2015/MWh_hydrogen)
                 om_annual: 0.04 # (10,000 EUR2015/MW_hydrogen/year)
+    salt_cavern_storage:
+        # hydrogen storage in salt caverns
+        # Data mostly from Caglayan et al. (2021) supplementary data
+        exists: false
+        essentials:
+            name: H2 storage in salt caverns
+            parent: storage
+            carrier: hydrogen
+        constraints:
+            # storage_cap_max needs to be defined for each country separately
+            storage_loss: 0.00  # No loss over time assumed
+            # energy_cap_per_storage_cap_equals: 0.0048 # Clarify what this actually does!
+            energy_eff: 0.98 # source: https://www.hystock.nl/en/hydrogen/storage-in-salt-caverns
+            lifetime: 100
+        costs:
+            monetary:
+                storage_cap: 0.12 # (10,000 EUR2015/MW); 1200 EUR/mWh capex in 2050; source: Victoria et al. (2022)
+                # om_annual: 0.0024 # 2% of CAPEX; source: Caglayan et al. (2019)
+                # om_annual_investment_fraction: 2 # 2% of CAPEX; source: Caglayan et al. (2019)
+                om_annual: 0.00 # Neumann et al. (2022)
